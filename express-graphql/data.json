@@ -1,0 +1,167 @@
+{
+  "companies":[
+    {
+      "id":1,
+      "name":"Nintendo"
+    },
+    {
+      "id":2,
+      "name":"Sega"
+    },
+    {
+      "id":3,
+      "name":"Sony"
+    },
+    {
+      "id":4,
+      "name":"Microsoft"
+    }
+  ],
+  "consoles":[
+    {
+      "id":1,
+      "name":"NES",
+      "release_year":1983,
+      "company_id":1
+    },
+    {
+      "id":2,
+      "name":"Game Boy",
+      "release_year":1989,
+      "company_id":1
+    },
+    {
+      "id":3,
+      "name":"SNES",
+      "release_year":1990,
+      "company_id":1
+    },
+    {
+      "id":4,
+      "name":"N64",
+      "release_year":1996,
+      "company_id":1
+    },
+    {
+      "id":5,
+      "name":"GameCube",
+      "release_year":2001,
+      "company_id":1
+    },
+    {
+      "id":6,
+      "name":"Game Boy Advance",
+      "release_year":2001,
+      "company_id":1
+    },
+    {
+      "id":7,
+      "name":"Nintendo DS",
+      "release_year":2006,
+      "company_id":1
+    },
+    {
+      "id":8,
+      "name":"Wii",
+      "release_year":2006,
+      "company_id":1
+    },
+    {
+      "id":9,
+      "name":"Nintendo 3DS",
+      "release_year":2011,
+      "company_id":1
+    },
+    {
+      "id":10,
+      "name":"Wii U",
+      "release_year":2012,
+      "company_id":1
+    },
+    {
+      "id":11,
+      "name":"Nintendo Switch",
+      "release_year":2017,
+      "company_id":1
+    },
+    {
+      "id":12,
+      "name":"Genesis",
+      "release_year":1988,
+      "company_id":2
+    },
+    {
+      "id":13,
+      "name":"Game Gear",
+      "release_year":1990,
+      "company_id":2
+    },
+    {
+      "id":14,
+      "name":"Sega Saturn",
+      "release_year":1990,
+      "company_id":2
+    },
+    {
+      "id":15,
+      "name":"Dreamcast",
+      "release_year":1998,
+      "company_id":2
+    },
+    {
+      "id":16,
+      "name":"PlayStation",
+      "release_year":1994,
+      "company_id":3
+    },
+    {
+      "id":17,
+      "name":"PlayStation 2",
+      "release_year":2000,
+      "company_id":3
+    },
+    {
+      "id":18,
+      "name":"PlayStation Portable",
+      "release_year":2004,
+      "company_id":3
+    },
+    {
+      "id":19,
+      "name":"PlayStation 3",
+      "release_year":2006,
+      "company_id":3
+    },
+    {
+      "id":20,
+      "name":"PlayStation Vita",
+      "release_year":2013,
+      "company_id":3
+    },
+    {
+      "id":21,
+      "name":"PlayStation 4",
+      "release_year":2013,
+      "company_id":3
+    },
+    {
+      "id":22,
+      "name":"Xbox",
+      "release_year":2001,
+      "company_id":4
+    },
+    {
+      "id":23,
+      "name":"Xbox 360",
+      "release_year":2005,
+      "company_id":4
+    },
+    {
+      "id":24,
+      "name":"Xbox One",
+      "release_year":2013,
+      "company_id":4
+    }
+  ]
+}
+
