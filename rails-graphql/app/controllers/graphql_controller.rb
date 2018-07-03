@@ -4,7 +4,13 @@ class GraphqlController < ApplicationController
     query = params[:query]
     operation_name = params[:operationName]
 
-    result = RailsGraphqlSchema.execute(query, variables: variables, operation_name: operation_name)
+    if query.present?
+      result = RailsGraphqlSchema.execute(query, variables: variables, operation_name: operation_name)
+    else
+      signature = params.dig(:extensions, :persistedQuery, :sha256Hash)
+      persisted_query = PersistedQuery.find_by!(signature: signature)
+      result = RailsGraphqlSchema.execute(persisted_query.query, variables: variables, operation_name: operation_name)
+    end
 
     render json: result
   rescue StandardError => e
