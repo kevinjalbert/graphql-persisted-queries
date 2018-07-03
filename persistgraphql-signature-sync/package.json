@@ -1,0 +1,16 @@
+{
+  "name": "persistgraphql-signature-sync",
+  "version": "0.1.0",
+  "description": "persistgraphql with signatures instead of incrementing ids. Also handles synchronizing to an endpoint.",
+  "main": "index.js",
+  "author": "Kevin Jalbert",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "0.10.5",
+    "hash.js": "^1.1.4",
+    "node-fetch": "2.1.2",
+    "persistgraphql": "0.3.11",
+    "yargs": "11.1.0"
+  }
+}
+
