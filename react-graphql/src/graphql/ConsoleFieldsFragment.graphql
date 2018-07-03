@@ -1,0 +1,4 @@
+fragment ConsoleFieldsFragment on Console {
+  name
+  releaseYear
+}

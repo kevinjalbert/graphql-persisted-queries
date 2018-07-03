@@ -1,0 +1,10 @@
+#import './ConsoleFieldsFragment.graphql'
+
+query ConsolesByYear ($afterYear: Int, $beforeYear: Int) {
+  consoles(afterYear: $afterYear, beforeYear: $beforeYear){
+    ...ConsoleFieldsFragment
+    company {
+      name
+    }
+  }
+}
