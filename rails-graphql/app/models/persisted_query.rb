@@ -1,0 +1,2 @@
+class PersistedQuery < ApplicationRecord
+end

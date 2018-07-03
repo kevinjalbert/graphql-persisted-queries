@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_07_014450) do
+ActiveRecord::Schema.define(version: 2018_06_17_011135) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2018_06_07_014450) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_consoles_on_company_id"
+  end
+
+  create_table "persisted_queries", force: :cascade do |t|
+    t.string "signature"
+    t.string "query"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["signature"], name: "index_persisted_queries_on_signature", unique: true
   end
 
 end
