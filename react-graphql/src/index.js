@@ -11,7 +11,7 @@ import App from './components/App';
 import './index.css';
 
 const client = new ApolloClient({
-  link: createPersistedQueryLink().concat(
+  link: createPersistedQueryLink({ useGETForHashedQueries: true }).concat(
     createHttpLink({ uri: 'http://localhost:5000/graphql' })
   ),
   cache: new InMemoryCache(),

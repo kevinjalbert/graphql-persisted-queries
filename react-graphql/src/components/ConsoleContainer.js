@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import QUERY from '../graphql/ConsolesByYear.graphql';
 
 const ConsolesAndCompany = ({ afterYear, beforeYear }) => (
-  <Query query={QUERY} variables={{ afterYear, beforeYear }}>
+  <Query query={QUERY} variables={{ afterYear, beforeYear }} fetchPolicy='network-only'>
     {({ data, error, loading }) => {
       if (error) return 'Error!';
       if (loading) return 'Loading';
