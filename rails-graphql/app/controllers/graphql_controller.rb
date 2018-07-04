@@ -1,5 +1,7 @@
 class GraphqlController < ApplicationController
   def execute
+    expires_in(10.seconds, public: true)
+
     variables = ensure_hash(params[:variables])
     query = params[:query]
     operation_name = params[:operationName]
@@ -7,7 +9,8 @@ class GraphqlController < ApplicationController
     if query.present?
       result = RailsGraphqlSchema.execute(query, variables: variables, operation_name: operation_name)
     else
-      signature = params.dig(:extensions, :persistedQuery, :sha256Hash)
+      extensions = JSON.parse(params[:extensions]) || {}
+      signature = extensions.dig("persistedQuery", "sha256Hash")
       persisted_query = PersistedQuery.find_by!(signature: signature)
       result = RailsGraphqlSchema.execute(persisted_query.query, variables: variables, operation_name: operation_name)
     end
